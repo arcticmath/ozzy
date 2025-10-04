@@ -12,7 +12,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d1117 50%, #0a0e1a 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
             height: 100vh;
@@ -72,14 +72,14 @@
         h1 {
             font-size: 5em;
             font-weight: 700;
-            background: linear-gradient(45deg, #00aeff, #a200ff, #00e5ff, #00aeff);
+            background: linear-gradient(45deg, #1e3a8a, #1e40af, #2563eb, #1e3a8a);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: gradientShift 4s ease infinite;
             margin-bottom: 30px;
-            text-shadow: 0 0 30px rgba(0, 174, 255, 0.5);
+            text-shadow: 0 0 30px rgba(30, 58, 138, 0.5);
         }
 
         @keyframes gradientShift {
@@ -99,7 +99,7 @@
         .skill-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            border: 2px solid rgba(0, 174, 255, 0.3);
+            border: 2px solid rgba(30, 58, 138, 0.3);
             border-radius: 20px;
             padding: 30px 40px;
             min-width: 200px;
@@ -133,7 +133,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(0, 174, 255, 0.1), transparent);
+            background: linear-gradient(45deg, transparent, rgba(30, 58, 138, 0.1), transparent);
             transform: rotate(45deg);
             animation: shimmer 3s infinite;
         }
@@ -145,8 +145,8 @@
 
         .skill-card:hover {
             transform: scale(1.1) translateY(-10px);
-            border-color: rgba(0, 174, 255, 0.8);
-            box-shadow: 0 20px 60px rgba(0, 174, 255, 0.4);
+            border-color: rgba(30, 58, 138, 0.8);
+            box-shadow: 0 20px 60px rgba(30, 58, 138, 0.4);
         }
 
         .skill-icon {
@@ -164,7 +164,7 @@
 
         .skill-name {
             font-size: 1.5em;
-            color: #00aeff;
+            color: #2563eb;
             font-weight: 600;
             margin-bottom: 10px;
         }
@@ -177,7 +177,7 @@
 
         .learning-badge {
             display: inline-block;
-            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.8em;
@@ -186,8 +186,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7); }
-            50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(96, 165, 250, 0); }
         }
 
         .particles {
@@ -199,7 +199,7 @@
 
         .particle {
             position: absolute;
-            background: rgba(0, 174, 255, 0.6);
+            background: rgba(30, 58, 138, 0.6);
             border-radius: 50%;
             animation: float 15s infinite;
         }
@@ -233,7 +233,6 @@
 <body>
     <div class="stars" id="stars"></div>
     <div class="grid-background"></div>
-    <div class="particles" id="particles"></div>
 
     <div class="time-display" id="time"></div>
 
@@ -257,12 +256,12 @@
                 <div class="skill-icon">JS</div>
                 <div class="skill-name">JavaScript</div>
                 <div class="skill-status">Currently Learning</div>
-                <div class="learning-badge">In Progress</div>
+                <div class="learning-badge">in Progress</div>
             </div>
         </div>
     </div>
 
-    <div class="footer-text">Keep Building • Keep Learning • Keep Creating</div>
+    <div class="footer-text">Website Made By Ozzy</div>
 
     <script>
         // Create stars
@@ -276,19 +275,6 @@
             star.style.top = Math.random() * 100 + '%';
             star.style.animationDelay = Math.random() * 3 + 's';
             starsContainer.appendChild(star);
-        }
-
-        // Create floating particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.width = Math.random() * 10 + 5 + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 15 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            particlesContainer.appendChild(particle);
         }
 
         // Update time for Central Time (Oklahoma City)
